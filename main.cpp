@@ -1,6 +1,6 @@
 using namespace std;
 #include <iostream>
-int num1,num2,res;
+int res;
 char op;
 class numbers
 {
@@ -8,30 +8,30 @@ class numbers
 public:
 int num1,num2;
 
-void addition(int num1, int num2){
+void addition(){
     res = num1+num2;
     cout << "Result is: " << res;
 }
-void subtraction(int num1, int num2){
+void subtraction(){
     res = num1-num2;
     cout << "Result is: " << res;
 }
-void multiplication(int num1, int num2){
+void multiplication(){
     res = num1*num2;
     cout << "Result is: " << res;
 }
-void division(int num1, int num2){
+void division(){
     res = num1/num2;
     cout << "Result is: " << res;    
 }
 
 
-}
+};
 
 char request_operator();
-
+numbers nums;
 int main(){
-    numbers nums;
+    
     cout << "Please enter the first number" << endl;
     cin >> nums.num1;
     cout << "Please enter the second number" << endl;
@@ -43,16 +43,16 @@ char request_operator(){
     cout << "Please enter the corresponding arithmatic operator (+,-,*,/)" <<endl;
     cin >> op;
     if (op == '+'){
-        nums.addition(num1,num2);
+        nums.addition();
     }
     else if (op == '-'){
-        nums.subtraction(num1,num2);
+        nums.subtraction();
     }
     else if (op == '*'){
-        nums.multiplication(num1,num2);
+        nums.multiplication();
     }
     else if (op == '/'){
-        nums.division(num1,num2);
+        nums.division();
     }
     else {
         request_operator();
